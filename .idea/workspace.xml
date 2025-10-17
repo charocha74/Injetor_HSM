@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca802ef1-e0b8-4eee-a8bb-c774e2413111" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/Client_send_multiport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Injetor_HSM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Injetor_HSM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client_send_multiport.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client_send_multiport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ger_key.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ger_key.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keys.txt" beforeDir="false" afterPath="$PROJECT_DIR$/keys.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,5 +156,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Client_send_multiport_file.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -33,12 +33,41 @@ def receber_mensagem(s):
 def processar_mensagem(mensagem_recebida):
     if len(mensagem_recebida) < 10:
         return {"erro": "mensagem incompleta ou inválida"}
-    return {
-        "header": mensagem_recebida[2:6],
-        "tipo_mensagem": mensagem_recebida[6:8],
-        "codigo_resposta": mensagem_recebida[8:10],
-        "resposta": mensagem_recebida[10:],
-    }
+    tipo_mensagem = mensagem_recebida[6:8]
+    tipo_solicitacao = mensagem[6:7]
+    tipo_key_scheme = mensagem[10:11]
+    print(f"Tipo de mensagem: {tipo_mensagem}, Tipo de solicitação: {tipo_solicitacao}, Tipo de algoritmo: {tipo_key_scheme}")
+    if tipo_mensagem == "A1" and tipo_solicitacao == "0" and tipo_key_scheme == "T":
+        return {
+            "header": mensagem_recebida[2:6],
+            "tipo_mensagem": mensagem_recebida[6:8],
+            "codigo_resposta": mensagem_recebida[8:10],
+            "crypto_LMK": mensagem_recebida[10:59],
+            "KCV": mensagem_recebida[59:65],
+        }
+    elif tipo_mensagem == "A1" and tipo_solicitacao == "0" and tipo_key_scheme == "U":
+        return {
+            "header": mensagem_recebida[2:6],
+            "tipo_mensagem": mensagem_recebida[6:8],
+            "codigo_resposta": mensagem_recebida[8:10],
+            "crypto_LMK": mensagem_recebida[10:43],
+            "KCV": mensagem_recebida[43:49],
+        }
+    elif tipo_mensagem == "A1" and tipo_solicitacao == "0" and tipo_key_scheme == "S":
+        return {
+            "header": mensagem_recebida[2:6],
+            "tipo_mensagem": mensagem_recebida[6:8],
+            "codigo_resposta": mensagem_recebida[8:10],
+            "crypto_LMK": mensagem_recebida[10:75],
+            "KCV": mensagem_recebida[75:81],
+        }
+    else:        
+        return {
+            "header": mensagem_recebida[2:6],
+            "tipo_mensagem": mensagem_recebida[6:8],
+            "codigo_resposta": mensagem_recebida[8:10],
+            "resposta": mensagem_recebida[10:],
+        }
 
 def imprimir_mensagem(mensagem_recebida):
     for chave, valor in mensagem_recebida.items():
